@@ -19,6 +19,15 @@
       "add": 0
     },
     {
+      "pid": "0x4206",
+      "description": "Mass flow through throttle valve bank 1",
+      "units": "kg/h",
+      "dataType": "unsigned int",
+      "multiply": 1,
+      "divide": 32,
+      "add": 0
+    },
+    {
       "pid": "0x4300",
       "description": "Coolant temperature",
       "units": "°C",
@@ -26,6 +35,33 @@
       "multiply": 0.1,
       "divide": 1,
       "add": -273.14
+    },
+    {
+      "pid": "0x4306",
+      "description": "Confirmed target speed electr. water pump",
+      "units": "1/min",
+      "dataType": "unsigned char",
+      "multiply": 1,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x4307",
+      "description": "Status message electr. water pump",
+      "units": "-",
+      "dataType": "unsigned char",
+      "multiply": 1,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x4310",
+      "description": "Target temperature coolant",
+      "units": "-",
+      "dataType": "signed int",
+      "multiply": 1,
+      "divide": 100,
+      "add": 0
     },
     {
       "pid": "0x4402",
@@ -37,6 +73,24 @@
       "add": -48
     },
     {
+      "pid": "0x4403",
+      "description": "Fuel consumption since the last oil change",
+      "units": "-",
+      "dataType": "unsigned long",
+      "multiply": 1,
+      "divide": 8192,
+      "add": 0
+    },
+    {
+      "pid": "0x4404",
+      "description": "Kilometers of oil",
+      "units": "km",
+      "dataType": "unsigned int",
+      "multiply": 10,
+      "divide": 1,
+      "add": 0
+    },
+    {
       "pid": "0x4408",
       "description": "Oil temperature unfiltered",
       "units": "°C",
@@ -44,6 +98,60 @@
       "multiply": 0.1,
       "divide": 1,
       "add": -273.14
+    },
+    {
+      "pid": "0x4409",
+      "description": "Unfiltered oil level",
+      "units": "mm",
+      "dataType": "signed int",
+      "multiply": 0.004,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x4411",
+      "description": "Remaining distance derived from fuel consumption",
+      "units": "-",
+      "dataType": "signed int",
+      "multiply": 1,
+      "divide": 0.1,
+      "add": 0
+    },
+    {
+      "pid": "0x4412",
+      "description": "Oil life",
+      "units": "mth",
+      "dataType": "unsigned int",
+      "multiply": 1,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x4421",
+      "description": "Oil pressure regulator P component",
+      "units": "-",
+      "dataType": "signed int",
+      "multiply": 2,
+      "divide": 65536,
+      "add": 0
+    },
+    {
+      "pid": "0x4422",
+      "description": "Oil pressure regulator I component",
+      "units": "-",
+      "dataType": "signed int",
+      "multiply": 2,
+      "divide": 65536,
+      "add": 0
+    },
+    {
+      "pid": "0x4423",
+      "description": "Oil pressure regulator D component",
+      "units": "-",
+      "dataType": "signed int",
+      "multiply": 2,
+      "divide": 65536,
+      "add": 0
     },
     {
       "pid": "0x4425",
@@ -55,12 +163,93 @@
       "add": 0
     },
     {
+      "pid": "0x4426",
+      "description": "Actual operating mode, oil pressure control",
+      "units": "-",
+      "dataType": "unsigned char",
+      "multiply": 1,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x442C",
+      "description": "Raw value oil level",
+      "units": "mm",
+      "dataType": "unsigned char",
+      "multiply": 1,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x442F",
+      "description": "Relative engine oil level in cl above minimum",
+      "units": "cl",
+      "dataType": "unsigned char",
+      "multiply": 1,
+      "divide": 1,
+      "add": 0
+    },
+    {
       "pid": "0x4436",
       "description": "Actual oil pressure value (absolute pressure)",
       "units": "hPa",
       "dataType": "unsigned int",
       "multiply": 1,
       "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x4501",
+      "description": "Integrated offset stroke adaptation",
+      "units": "-",
+      "dataType": "signed int",
+      "multiply": 0.001,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x4505",
+      "description": "Target angle (inlet VANOS)",
+      "units": "° KW",
+      "dataType": "signed int",
+      "multiply": 1,
+      "divide": 128,
+      "add": 0
+    },
+    {
+      "pid": "0x4506",
+      "description": "Angle of the inlet NW flanks relative to the crankshaft",
+      "units": "° KW",
+      "dataType": "signed int",
+      "multiply": 0.02197266,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x4507",
+      "description": "Angle of the outlet NW flanks relative to the crankshaft",
+      "units": "° KW",
+      "dataType": "signed int",
+      "multiply": 0.02197266,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x4516",
+      "description": "Status VVT stop learning (internal)",
+      "units": "-",
+      "dataType": "unsigned char",
+      "multiply": 1,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x4520",
+      "description": "Effective engine power",
+      "units": "-",
+      "dataType": "unsigned int",
+      "multiply": 1000,
+      "divide": 65536,
       "add": 0
     },
     {
@@ -127,6 +316,15 @@
       "add": 0
     },
     {
+      "pid": "0x452A",
+      "description": "Setpoint outlet spread variable NWS",
+      "units": "° KW",
+      "dataType": "signed int",
+      "multiply": 1,
+      "divide": 10,
+      "add": 0
+    },
+    {
       "pid": "0x452B",
       "description": "Setpoint inlet spread variable NWS",
       "units": "° KW",
@@ -151,6 +349,132 @@
       "dataType": "signed int",
       "multiply": 1,
       "divide": 10,
+      "add": 0
+    },
+    {
+      "pid": "0x4530",
+      "description": "Injection mode, cylinder 1",
+      "units": "-",
+      "dataType": "unsigned char",
+      "multiply": 1,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x4531",
+      "description": "Injection mode, cylinder 2",
+      "units": "-",
+      "dataType": "unsigned char",
+      "multiply": 1,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x4532",
+      "description": "Injection mode, cylinder 3",
+      "units": "-",
+      "dataType": "unsigned char",
+      "multiply": 1,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x4533",
+      "description": "Injection mode, cylinder 4",
+      "units": "-",
+      "dataType": "unsigned char",
+      "multiply": 1,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x4534",
+      "description": "Injection mode, cylinder 5",
+      "units": "-",
+      "dataType": "unsigned char",
+      "multiply": 1,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x4535",
+      "description": "Injection mode, cylinder 6",
+      "units": "-",
+      "dataType": "unsigned char",
+      "multiply": 1,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x4536",
+      "description": "Control difference boost pressure - bank-specific bank 1",
+      "units": "hPa",
+      "dataType": "signed int",
+      "multiply": 125,
+      "divide": 1000,
+      "add": 0
+    },
+    {
+      "pid": "0x4537",
+      "description": "Control difference boost pressure - bank-specific bank 2",
+      "units": "hPa",
+      "dataType": "signed int",
+      "multiply": 0.125,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x4600",
+      "description": "Throttle valve angle related to the lower stop",
+      "units": "%",
+      "dataType": "signed int",
+      "multiply": 0.0078125,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x4601",
+      "description": "Target value for throttle valve angle, based on (lower) stop",
+      "units": "%",
+      "dataType": "unsigned int",
+      "multiply": 100,
+      "divide": 65536,
+      "add": 0
+    },
+    {
+      "pid": "0x4807",
+      "description": "Engine speed",
+      "units": "1/min",
+      "dataType": "signed int",
+      "multiply": 1,
+      "divide": 2,
+      "add": 0
+    },
+    {
+      "pid": "0x480B",
+      "description": "Normalized accelerator pedal angle",
+      "units": "%",
+      "dataType": "signed int",
+      "multiply": 0.01220703,
+      "divide": 1,
+      "add": 0
+    },
+    {
+      "pid": "0x4AB0",
+      "description": "Boost pressure setpoint",
+      "units": "hPa",
+      "dataType": "unsigned int",
+      "multiply": 10,
+      "divide": 256,
+      "add": 0
+    },
+    {
+      "pid": "0x4AB1",
+      "description": "Vehicle speed",
+      "units": "km/h",
+      "dataType": "signed int",
+      "multiply": 0.01,
+      "divide": 1,
       "add": 0
     }
   ]
